@@ -4,7 +4,12 @@
   "scripts": {
     "dev": "node ./scripts/dev-select.mjs",
     "build": "slidev build",
-    "export": "slidev export"
+    "export": "slidev export",
+    "format": "prettier --write \"chapters/**/*.md\"",
+    "format:check": "prettier --check \"chapters/**/*.md\""
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
   },
   "dependencies": {
     "@inquirer/prompts": "^8.3.0",

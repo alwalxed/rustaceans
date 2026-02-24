@@ -1,9 +1,7 @@
 {
-    "cSpell.words": [
-        "alwaleed",
-        "joudy",
-        "rustaceans",
-        "slidev",
-        "waleed"
-    ]
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": ["alwaleed", "joudy", "rustaceans", "slidev", "waleed"]
 }

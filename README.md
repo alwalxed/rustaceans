@@ -3,19 +3,15 @@
 Collaborative slide decks for the Rust Book study group. Each chapter has its
 own folder; each presenter has a separate `.md` file.
 
-## Presenters
-
-alwaleed · joudy · mohammed · lina · waleed
-
 ## Structure
 
 ```bash
 chapters/
 ├── 00-intro/
 │   ├── alwaleed.md
-│   ├── waleed.md
-│   ├── mohammed.md
 │   ├── joudy.md
+│   ├── mohammed.md
+│   ├── waleed.md
 │   └── lina.md
 ├── 01-basics/
 ├── 04-understanding-ownership/

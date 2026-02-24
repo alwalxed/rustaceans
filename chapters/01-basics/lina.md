@@ -1,10 +1,10 @@
 ---
 theme: default
-title: "Getting Started"
+title: "Basics"
 presenter: lina
 ---
 
-# Getting Started
+# Basics
 
 **Presenter:** lina  
 **Rust Book:** https://doc.rust-lang.org/book/

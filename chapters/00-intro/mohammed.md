@@ -1,10 +1,10 @@
 ---
 theme: default
-title: "Prelude"
+title: "Intro"
 presenter: mohammed
 ---
 
-# Foreword
+# Intro
 
 **Presenter:** mohammed  
 **Rust Book:** https://doc.rust-lang.org/book/

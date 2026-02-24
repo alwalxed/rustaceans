@@ -1,10 +1,10 @@
 ---
 theme: default
-title: "Prelude"
+title: "Intro"
 presenter: alwaleed
 ---
 
-# Foreword
+# Intro
 
 **Presenter:** alwaleed  
 **Rust Book:** https://doc.rust-lang.org/book/

@@ -1,10 +1,10 @@
 ---
 theme: default
-title: "Getting Started"
+title: "Basics"
 presenter: joudy
 ---
 
-# Getting Started
+# Basics
 
 **Presenter:** joudy  
 **Rust Book:** https://doc.rust-lang.org/book/

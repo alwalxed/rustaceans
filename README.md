@@ -1,12 +1,14 @@
 # The Rust Book (Rustaceans)
 
-Collaborative slide decks for the Rust Book study group.
-Each chapter has its own folder; each presenter has a separate `.md` file.
+Collaborative slide decks for the Rust Book study group. Each chapter has its
+own folder; each presenter has a separate `.md` file.
 
 ## Presenters
+
 alwaleed · joudy · mohammed · lina · waleed
 
 ## Structure
+
 ```
 chapters/
 ├── 00-intro/
@@ -22,6 +24,7 @@ chapters/
 ```
 
 ## Setup & Run
+
 ```bash
 # install deps
 npm install

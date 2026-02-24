@@ -1,4 +1,4 @@
-# The Rust Book (Rustaceans)
+# The Rust Book Study Group
 
 Collaborative slide decks for the Rust Book study group. Each chapter has its
 own folder; each presenter has a separate `.md` file.
@@ -9,10 +9,10 @@ own folder; each presenter has a separate `.md` file.
 chapters/
 ├── 00-intro/
 │   ├── alwaleed.md
-│   ├── joudy.md
-│   ├── mohammed.md
-│   ├── waleed.md
-│   └── lina.md
+│   ├── ....md
+│   ├── ....md
+│   ├── ....md
+│   └── ....md
 ├── 01-basics/
 ├── 04-understanding-ownership/
 ├── ...

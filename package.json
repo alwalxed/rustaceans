@@ -2,12 +2,13 @@
   "name": "rustaceans",
   "private": true,
   "scripts": {
-    "dev": "slidev",
+    "dev": "node ./scripts/dev-select.mjs",
     "build": "slidev build",
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.49.0",
-    "@slidev/theme-default": "latest"
+    "@inquirer/prompts": "^8.3.0",
+    "@slidev/cli": "52.12.0",
+    "@slidev/theme-default": "0.25.0"
   }
 }

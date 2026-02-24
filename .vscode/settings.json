@@ -1,7 +1,23 @@
 {
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
   "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": false,
+    "editor.formatOnSaveMode": "file",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
+
   "cSpell.words": ["alwaleed", "joudy", "rustaceans", "slidev", "waleed"]
 }

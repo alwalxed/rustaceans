@@ -5,8 +5,7 @@
     "dev": "node ./scripts/dev-select.mjs",
     "build": "slidev build",
     "export": "slidev export",
-    "format": "prettier --write \"chapters/**/*.md\"",
-    "format:check": "prettier --check \"chapters/**/*.md\""
+    "format": "prettier --write \"chapters/**/*.md\""
   },
   "devDependencies": {
     "prettier": "^3.3.3"

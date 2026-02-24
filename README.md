@@ -9,7 +9,7 @@ alwaleed · joudy · mohammed · lina · waleed
 
 ## Structure
 
-```
+```bash
 chapters/
 ├── 00-intro/
 │   ├── alwaleed.md

@@ -1,12 +1,12 @@
 ---
 theme: default
 title: "Intro"
-presenter: mohammed
+presenter: Muhammad
 ---
 
 # Intro
 
-**Presenter:** mohammed  
+**Presenter:** Muhammad  
 **Rust Book:** https://doc.rust-lang.org/book/
 
 ---

@@ -4,13 +4,14 @@ title: "Intro to Rust (Study Group)"
 presenter: alwaleed
 transition: slide-left
 mdc: true
+highlighter: shiki
 ---
 
 ## Intro to Rust
 
 # A Study Group Kickoff
 
-"Technology from the past, come to save the future from itself", Graydon Hoare
+_"Technology from the past, come to save the future from itself"_, Graydon Hoare
 
 ---
 
@@ -29,13 +30,25 @@ mdc: true
 
 # What is Rust?
 
-A systems programming language built around three core promises:
+Rust is a **systems programming language**, meaning it's used for software that
+runs close to the hardware: operating systems, browsers, game engines, network
+tools.
+
+> Unlike Python or JavaScript, which manage a lot for you behind the scenes,
+> Rust gives you **direct control over memory and CPU usage**, without the usual
+> risk of crashes.
 
 <v-clicks>
 
-- **Safety**, no null pointers, no data races, no use-after-free
-- **Speed**, performance on par with C and C++
-- **Concurrency**, fearless, by design
+It makes three core promises:
+
+- 🛡 **Safety**, no null pointer crashes, no use-after-free bugs, no data races.
+  The compiler catches these _before_ your program ever runs.
+- ⚡ **Speed**, performance on par with C and C++. No hidden runtime slowing
+  things down.
+- 🔀 **Concurrency**, running multiple tasks at the same time (e.g. a server
+  handling 10,000 requests simultaneously). Rust makes this safe _by design_, if
+  it compiles, it's free of data races.
 
 </v-clicks>
 
@@ -45,16 +58,19 @@ A systems programming language built around three core promises:
 
 <v-clicks>
 
-- **Zero-cost abstractions**, you don't pay for what you don't use
-- **Memory safety without a garbage collector**, ownership and borrowing handle
-  it at compile time
-- **The compiler is your teammate**, it catches bugs before they ever run
-- **Clear, actionable error messages**, it doesn't just fail, it tells you how
-  to fix it
-- **Expressive type system**, entire classes of runtime errors simply can't
-  exist
-- **World-class tooling**, Cargo, rustfmt, and Clippy out of the box
-- **Thriving ecosystem**, and a community that actually welcomes beginners
+- **Zero-cost abstractions**, the language gives you shortcuts to write clean
+  code, but they carry no performance penalty. You don't pay for what you don't
+  use.
+- **Memory safety without a garbage collector**, languages like Java and Python
+  use a GC that periodically pauses your program to clean up memory. Rust has no
+  GC. Instead, _ownership rules_ enforce cleanup at compile time, no pauses, no
+  surprises.
+- **The compiler is your teammate**, most compilers just say "error on line 12."
+  Rust's compiler tells you _why_ it failed and _how_ to fix it. Even veterans
+  find it helpful.
+- **Expressive type system**, the type system enforces rules about your data.
+  Rust's is powerful enough that entire categories of bugs (null errors, integer
+  overflows) become _compile-time_ errors instead of _runtime_ surprises.
 
 </v-clicks>
 
@@ -62,55 +78,41 @@ A systems programming language built around three core promises:
 
 # Origin Story
 
-<v-clicks>
+<v-click>
 
-- **2006**, Graydon Hoare, 29, a Mozilla engineer, starts Rust as a personal
-  side project
-- **2009**, Mozilla officially sponsors it
-- **2015**, Rust 1.0 ships after nearly a decade of research and iteration
+| Year      | Event / Milestone                                                                                                                        |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 2006      | Graydon Hoare, 29, frustrated by a broken elevator, starts Rust as a side project (~38k lines in OCaml; had a GC; named after a fungus). |
+| 2009      | Mozilla officially sponsors Rust; team grows, GC removed, rewritten in Rust itself.                                                      |
+| 2012–2014 | PhD researchers join; Cargo & crates.io launch; RFC process begins.                                                                      |
+| 2015      | Rust 1.0 stable release; 6-week release train begins.                                                                                    |
 
-</v-clicks>
+<small>RFC = Request for Comments; proposals are posted publicly for review to
+maintain stability.</small>
 
-| Era         | Years     | Milestone                                                   |
-| ----------- | --------- | ----------------------------------------------------------- |
-| Personal    | 2006–2009 | ~38k lines of OCaml; had a GC                               |
-| Mozilla     | 2009–2012 | Team grows; GC removed; rewritten in Rust                   |
-| Type System | 2012–2014 | PhDs join; Cargo & crates.io launch; RFC process introduced |
-| Release     | 2015–2016 | 1.0 stable; 6-week release train begins                     |
-| Production  | 2016–now  | Most loved language on Stack Overflow every year since 2016 |
+</v-click>
 
 ---
 
 # Who Uses Rust in Production?
 
+_"In production" means real software that real users depend on, not
+experiments._
+
 <v-clicks>
 
-- **Microsoft**, Windows components, Azure
-- **Amazon**, Firecracker, Bottlerocket, Lambda
-- **Google**, Android, Fuchsia, core infrastructure
-- **Apple, Meta, Cloudflare, Figma, Bytedance, X/Twitter**
-- **Linux Kernel**, drivers and modules, growing rapidly
-- **US Government**, multiple agencies
-- **Solana**, high-performance blockchain
+- **Microsoft**, Windows components, Azure infrastructure
+- **Amazon**, Firecracker (the virtualization tech powering AWS Lambda),
+  Bottlerocket
+- **Google**, Android, Fuchsia OS, core infrastructure
+- **Apple, Meta, Cloudflare, Figma, ByteDance, X/Twitter**, core backend systems
+- **Linux Kernel**, drivers and modules; first new language accepted into the
+  kernel in 30+ years
+- **US Government**, multiple agencies recommending or mandating memory-safe
+  languages
+- **Solana**, high-performance blockchain (speed and safety both matter here)
 - And hundreds more →
   [github.com/omarabid/rust-companies](https://github.com/omarabid/rust-companies)
-
-</v-clicks>
-
----
-
-# Fun Facts Worth Sharing
-
-<v-clicks>
-
-- **Rust is named after a fungus**, Graydon's own words: "over-engineered for
-  survival"
-- **A broken elevator sparked it all**, Hoare lived on the 21st floor of his
-  Vancouver apartment building; a software crash in the elevator was the last
-  straw
-- **Every 6 weeks, a new release**, before shipping, they compile ~5,000 crates
-  to verify backward compatibility. No half-cooked features rushed out the door
-  to meet a yearly deadline.
 
 </v-clicks>
 
@@ -120,13 +122,15 @@ A systems programming language built around three core promises:
 
 <v-clicks>
 
-- I want to **deeply understand** how computers actually work at a low level
-- I've touched C, Go, JavaScript, Python, and PHP, none of them felt as
-  **intellectually exciting** as Rust
-- C is powerful, but I don't want to babysit memory manually, I want **a
-  compiler that has my back**
+- I want to **deeply understand** how computers actually work at a low level,
+  memory, the stack, the heap, all of it.
+- I've touched C, Go, JavaScript, Python, and PHP. None of them felt as
+  **intellectually exciting** as Rust.
+- C is powerful, but I don't want to babysit memory manually. I want **a
+  compiler that has my back**, one that catches mistakes instead of letting them
+  silently corrupt memory.
 - I believe Rust has a **strong future**, and I'd rather learn it early than
-  catch up later
+  spend years catching up later.
 
 </v-clicks>
 
@@ -136,10 +140,13 @@ A systems programming language built around three core promises:
 
 <v-clicks>
 
-- We go through **all the chapters**, no skipping
-- Everyone shows up **serious about learning**
-- Everyone **genuinely enjoys** the process
-- No question is a dumb question, **ask everything**
+- We go through **all 21 chapters**, no skipping. Each chapter builds on the
+  last.
+- Everyone shows up **serious about learning**, this isn't a casual read-along.
+- Everyone **genuinely enjoys** the process. Rust can feel hard at first. That
+  friction means you're learning. Lean into it.
+- No question is a dumb question, **ask everything**. If you're confused,
+  someone else is too.
 
 </v-clicks>
 
@@ -147,29 +154,28 @@ A systems programming language built around three core promises:
 
 # Study Plan
 
-We’ll follow the **official Rust book**, chapter by chapter.
+We'll follow the **official Rust Book**
+([doc.rust-lang.org/book](https://doc.rust-lang.org/book)), freely available
+online, written by the Rust team itself.
 
 Each session:
 
-- Each of us will present
-- Zero passivity, everyone participates.
+- One of us will present, **zero passivity**, everyone participates.
 
 Structure:
 
-- **Chapters 1–3**: covered together (short and closely related).
+- **Chapters 1–3**: covered together in one session (short and closely related,
+  installation, basic syntax, your first programs).
 - **Chapter 4 onward**: one chapter per session.
-- The book has **21 chapters**.
-- The plan can evolve if we find a better approach.
+- **21 chapters total**. The plan can evolve if we find a better approach.
 
 ---
 
 # Links
 
-- [The History of Rust](https://www.youtube.com/watch?v=79PSagCD_AY)
-- [Graydon's Intro Talk](https://venge.net/graydon/talks/intro-talk-2.pdf)
-- [Rust Companies](https://github.com/omarabid/rust-companies)
-- [crates.io](https://crates.io)
-- [Rust Lang Book](https://doc.rust-lang.org/book/)
-- [Rust Friends](https://prev.rust-lang.org/en-US/friends.html)
-
----
+- [The Rust Book (official, free)](https://doc.rust-lang.org/book/)
+- [The History of Rust, YouTube talk](https://www.youtube.com/watch?v=79PSagCD_AY)
+- [Graydon's Original Intro Talk](https://venge.net/graydon/talks/intro-talk-2.pdf)
+- [crates.io, Rust package registry](https://crates.io)
+- [Companies using Rust](https://github.com/omarabid/rust-companies)
+- [Rust Friends, production users list](https://prev.rust-lang.org/en-US/friends.html)

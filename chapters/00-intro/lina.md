@@ -39,6 +39,7 @@ What are we concerned about when choosing a programming language?
 - Memory Efficiency
 - Safety 
 - Industry-Grade Performance: many tech giants are funding the rust foundation 
+-
 
 "research show Rust's overall superiority over other well-established languages in terms of performance, safety, and security"
 source: `Rust: The Programming Language for Safety and Performance`

@@ -1,92 +1,57 @@
 ---
 theme: default
 title: "Intro"
-presenter: mohammed
+presenter: Muhammad
 ---
 
 # Intro
 
-**Presenter:** mohammed  
+**Presenter:** Muhammad  
 **Rust Book:** https://doc.rust-lang.org/book/
 
 ---
 
 ## Overview
 
-<!--
-  Brief summary of this chapter's core topics.
-  Replace these bullets with the actual content.
--->
-
-- ...
-- ...
-- ...
+- Who is Muhammad?
+- What is Rust, and why does it matter?
+- Why I personally want to learn Rust
+- What I hope we build together as a group
 
 ---
 
-## Key Concepts
+## Who Am I?
 
-<!-- Add your main concept slides here. Use --- to separate slides. -->
-
----
-
-## Code Example
-
-```rust
-fn main() {
-    // Add your Rust example here
-}
-```
-
-<!--
-  Presenter notes: explain what this code demonstrates.
-  These notes appear in presenter mode (press P).
--->
+- I'm **Muhammad**
+- Software engineering graduate, and I now work as a frontend engineer
+- I've mainly worked with JavaScript, with React as my framework of choice for
+  developing web applications
 
 ---
 
-## Common Pitfalls
+## What is Rust?
 
-<!-- What mistakes do beginners make related to this chapter? -->
-
-- ...
-
----
-
-## Exercise
-
-> Try it yourself!
-
-```rust
-// What's wrong with this code? Or fill in the blank:
-fn main() {
-    // ...
-}
-```
-
-<!--
-  Hint for presenter: ...
--->
+- A memory-safe compiled systems programming language focused on three things:
+  speed, safety, and concurrency
+- The compiler is strict by design, it catches a ton of bugs before you run your
+  code (think null pointers, dangling references, etc..)
+- Used in: OS kernels, WebAssembly, game engines, CLI tools, embedded systems,
+  and more
 
 ---
 
-## Discussion
+## Why I'm Learning Rust
 
-1. ...
-2. ...
-
----
-
-## Key Takeaways
-
-- ...
-- ...
-- ...
+- I want to go lower level, work more with embedded systems and hardware, and
+  understanding how memory works and the underlying processes is something I've
+  always been interested in but never properly got around to learning..
+- I want to learn what it actually looks like to write software that is fast and
+  correct, as working with JS doesn't teach much in that regard, and maybe dive
+  later on in backend and distributed systems
 
 ---
 
-## Resources
+## What I Expect From This Group
 
-- [Rust Book — Foreword](https://doc.rust-lang.org/book/)
-- [Rust Playground](https://play.rust-lang.org/)
-- [Rustlings](https://github.com/rust-lang/rustlings)
+- A place to learn, share thoughts, and stay motivated
+- For us as a group to help each other out, especially on complicated topics

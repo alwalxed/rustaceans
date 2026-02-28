@@ -13,80 +13,52 @@ presenter: lina
 
 ## Overview
 
-<!--
-  Brief summary of this chapter's core topics.
-  Replace these bullets with the actual content.
--->
 
-- ...
-- ...
-- ...
+- `whoami`
+- Rust intro
+- My "Why Rust?"
+- Joining the study group
 
 ---
 
-## Key Concepts
+## Self Introduction 
 
-<!-- Add your main concept slides here. Use --- to separate slides. -->
-
----
-
-## Code Example
-
-```rust
-fn main() {
-    // Add your Rust example here
-}
-```
-
-<!--
-  Presenter notes: explain what this code demonstrates.
-  These notes appear in presenter mode (press P).
--->
+- 2023 graduate
+- Worked in Data Engineering 
+- Switched later to DevOps and Cloud
 
 ---
 
-## Common Pitfalls
+## Rust Intro
+About: 
+- low level/ system leve programming langauge
+- used for system programming, backend, and many other things 
 
-<!-- What mistakes do beginners make related to this chapter? -->
+What are we concerned about when choosing a programming language?
+- Performance
+- Memory Efficiency
+- Safety 
+- Industry-Grade Performance: many tech giants are funding the rust foundation 
+-
 
-- ...
-
----
-
-## Exercise
-
-> Try it yourself!
-
-```rust
-// What's wrong with this code? Or fill in the blank:
-fn main() {
-    // ...
-}
-```
-
-<!--
-  Hint for presenter: ...
--->
+"research show Rust's overall superiority over other well-established languages in terms of performance, safety, and security"
+source: `Rust: The Programming Language for Safety and Performance`
 
 ---
 
-## Discussion
+## Why I want to learn Rust
 
-1. ...
-2. ...
-
----
-
-## Key Takeaways
-
-- ...
-- ...
-- ...
+- the scope of the language: Cloud services (aws lambda and fargage e.g.)
+- learning curve: debatable 
+- how popular: usage growth is very high, everyone is switching to it!
 
 ---
 
-## Resources
+## Why did I join a study group
+- accountability 
+- to be surrounded by motivated people
 
-- [Rust Book — Foreword](https://doc.rust-lang.org/book/)
-- [Rust Playground](https://play.rust-lang.org/)
-- [Rustlings](https://github.com/rust-lang/rustlings)
+
+---
+###
+# Thank you!
